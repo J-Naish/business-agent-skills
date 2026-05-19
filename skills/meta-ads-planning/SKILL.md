@@ -1,6 +1,6 @@
 ---
 name: meta-ads-planning
-description: Plan and design Meta ads programs for Facebook, Instagram, Messenger, Threads, Audience Network, and WhatsApp end-to-end: choose objectives, conversion locations, performance goals, Advantage+ automation, campaign structure, creative requirements, placements, Pixel/CAPI/app/CRM measurement, diagnostics, and operating instructions. Use this skill whenever the user mentions Meta ads, Facebook ads, Instagram ads, paid social on Meta, Advantage+ Sales/Leads/App, Lead Ads, Reels ads, app promotion, catalog ads, or Meta campaign planning. Skip for unrelated paid-media platforms.
+description: "Plan and design Meta ads programs for Facebook, Instagram, Messenger, Threads, Audience Network, and WhatsApp end-to-end: choose objectives, conversion locations, performance goals, Advantage+ automation, campaign structure, creative requirements, placements, Pixel/CAPI/app/CRM measurement, diagnostics, and operating instructions. Use this skill whenever the user mentions Meta ads, Facebook ads, Instagram ads, paid social on Meta, Advantage+ Sales/Leads/App, Lead Ads, Reels ads, app promotion, catalog ads, or Meta campaign planning. Skip for unrelated paid-media platforms."
 ---
 
 # Meta Ads Planning

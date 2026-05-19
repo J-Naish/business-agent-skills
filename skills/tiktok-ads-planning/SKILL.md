@@ -1,6 +1,6 @@
 ---
 name: tiktok-ads-planning
-description: Plan and design TikTok Ads programs end-to-end: choose TikTok Ads Manager objectives, ad formats, campaign structure, targeting, bidding, creative requirements, TikTok Shop/GMV Max options, Smart+, Symphony, lead generation, messaging, search, Spark Ads, premium reservation formats, and measurement. Use this skill whenever the user mentions TikTok Ads, TikTok for Business, TikTok Ads Manager, Spark Ads, Smart+, GMV Max, Video Shopping Ads, Search Ads, Lead Generation, Brand Consideration, Symphony, Branded Mission, Branded Effects, Branded Hashtag Challenge, TopView, Brand Takeover, Top Feed, TopReach, Logo Takeover, Prime Time, Pulse Mentions, Pulse Tastemakers, or TikTok campaign planning.
+description: "Plan and design TikTok Ads programs end-to-end: choose TikTok Ads Manager objectives, ad formats, campaign structure, targeting, bidding, creative requirements, TikTok Shop/GMV Max options, Smart+, Symphony, lead generation, messaging, search, Spark Ads, premium reservation formats, and measurement. Use this skill whenever the user mentions TikTok Ads, TikTok for Business, TikTok Ads Manager, Spark Ads, Smart+, GMV Max, Video Shopping Ads, Search Ads, Lead Generation, Brand Consideration, Symphony, Branded Mission, Branded Effects, Branded Hashtag Challenge, TopView, Brand Takeover, Top Feed, TopReach, Logo Takeover, Prime Time, Pulse Mentions, Pulse Tastemakers, or TikTok campaign planning."
 ---
 
 # TikTok Ads Planning
