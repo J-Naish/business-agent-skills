@@ -1,0 +1,10 @@
+interface:
+  display_name: "X Research"
+  short_description: "Research X with API-backed scripts"
+  icon_small: "./assets/x.svg"
+  icon_large: "./assets/x.svg"
+  brand_color: "#000000"
+  default_prompt: "Use $x-research to investigate topics, trends, accounts, posts, conversations, Lists, Spaces, news, and public discourse on X with API-backed scripts."
+
+policy:
+  allow_implicit_invocation: true
