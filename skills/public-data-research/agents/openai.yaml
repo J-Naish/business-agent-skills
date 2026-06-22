@@ -1,0 +1,10 @@
+interface:
+  display_name: "Public Data Research"
+  short_description: "Research public statistics with source-specific APIs"
+  icon_small: "./assets/public-data.svg"
+  icon_large: "./assets/public-data.svg"
+  brand_color: "#2563EB"
+  default_prompt: "Use $public-data-research to find, fetch, and summarize public statistical data from e-Stat, World Bank, IMF, BOJ, OECD, BIS, FAOSTAT, GDELT, and related source-specific APIs."
+
+policy:
+  allow_implicit_invocation: true
