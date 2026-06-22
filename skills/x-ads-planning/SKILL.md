@@ -1,6 +1,6 @@
 ---
 name: x-ads-planning
-description: Plan and design X Ads programs end-to-end: choose campaign objectives, X ad formats, campaign structure, targeting, bidding, creative requirements, measurement, policy constraints, and operating cadence. Use this skill whenever the user mentions X Ads, Twitter Ads, paid campaigns on X, Promoted Ads, Vertical Video Ads, X Amplify, X Takeovers, Dynamic Product Ads, Collection Ads, Branded Notifications, Branded Hashtags, Keyword Ads, Housing/Lending/Credit ads, Cause-Based Advertising, regulated X Ads, or X campaign planning.
+description: "Plan and design X Ads programs end-to-end: choose campaign objectives, X ad formats, campaign structure, targeting, bidding, creative requirements, measurement, policy constraints, and operating cadence. Use this skill whenever the user mentions X Ads, Twitter Ads, paid campaigns on X, Promoted Ads, Vertical Video Ads, X Amplify, X Takeovers, Dynamic Product Ads, Collection Ads, Branded Notifications, Branded Hashtags, Keyword Ads, Housing/Lending/Credit ads, Cause-Based Advertising, regulated X Ads, or X campaign planning."
 ---
 
 # X Ads Planning
