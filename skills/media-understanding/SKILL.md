@@ -42,9 +42,8 @@ media-understanding/
 ## Prerequisites
 
 - **Python 3.10+** must be installed.
-- A `GEMINI_API_KEY` must be available to the script (any of the three methods below works).
-
-Get an API key at https://aistudio.google.com/apikey.
+- `GEMINI_API_KEY` is assumed to already be available from the OS environment or a nearby `.env` file.
+- Do not print, inspect, edit, or commit secret values.
 
 ### How to run the scripts
 
@@ -63,25 +62,6 @@ python3 <skill-dir>/scripts/analyze_video.py "prompt" video.mp4
 ```
 
 The command examples below use the shortest form, `uv run`, but Options B and C run the same scripts identically.
-
-### Passing `GEMINI_API_KEY`
-
-Each script looks up the key in this order and uses the first match:
-
-1. **`os.environ`** — Variables set by `export`, by an external loader (direnv, 1Password, etc.), or prefixed inline on the command.
-2. **`.env` file** — Walks up from the current working directory and loads the first `.env` it finds.
-
-```bash
-# Option 1: drop a .env in the project root (easiest)
-echo 'GEMINI_API_KEY=your-key-here' >> .env
-# Add .env to .gitignore.
-
-# Option 2: export in your shell
-export GEMINI_API_KEY=your-key-here
-
-# Option 3: prefix inline on the command
-GEMINI_API_KEY=your-key-here uv run ...
-```
 
 ---
 
@@ -356,7 +336,7 @@ The Files API limit is 20 GB on paid tiers and 2 GB on free tiers.
 
 | Problem | Fix |
 |---|---|
-| `GEMINI_API_KEY` is unset | Pass it using one of the three methods in "Prerequisites" (`.env` file, `export`, or inline). |
+| `GEMINI_API_KEY` is unset | Define it in the OS environment or a nearby `.env` file. |
 | `google-genai` not found | If running with `uv run` or `pipx run`, dependencies auto-resolve. If using plain `python3`, run `pip install google-genai python-dotenv` first. |
 | Empty response | Likely blocked by a safety filter. Adjust the prompt. |
 | Upload is slow | Video files >20 MB total request size, long videos, repeated video analyses, and audio files >20 MB go through the Files API. Narrow the range with `--start` / `--end` (video) or inside the prompt (audio). |

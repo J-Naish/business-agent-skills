@@ -37,12 +37,7 @@ from openai import OpenAI
 
 
 def load_api_key():
-    """Resolve OPENAI_API_KEY from the environment, falling back to a .env file.
-
-    Lookup order:
-      1. os.environ (set by the shell, an external loader, or inline prefix)
-      2. The nearest .env file walking up from the current working directory
-    """
+    """Resolve OPENAI_API_KEY from os.environ or the nearest .env file."""
     api_key = os.environ.get("OPENAI_API_KEY")
     if api_key:
         return api_key
@@ -60,16 +55,7 @@ def load_api_key():
                 return api_key
 
     print(
-        "ERROR: OPENAI_API_KEY is not set.\n\n"
-        "Set it in one of these ways:\n\n"
-        "  Option 1: Create a .env file in your project root\n"
-        "    echo 'OPENAI_API_KEY=your-key-here' >> .env\n"
-        "    (and add .env to .gitignore)\n\n"
-        "  Option 2: Export it in your shell\n"
-        "    export OPENAI_API_KEY=your-key-here\n\n"
-        "  Option 3: Set it inline\n"
-        "    OPENAI_API_KEY=your-key-here <command>\n\n"
-        "Get a key at https://platform.openai.com/api-keys",
+        "ERROR: OPENAI_API_KEY is not set. Define it in the OS environment or a nearby .env file.",
         file=sys.stderr,
     )
     sys.exit(1)

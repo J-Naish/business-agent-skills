@@ -24,7 +24,8 @@ x-research/
 ## Prerequisites
 
 - **Python 3.10+** must be installed.
-- X API credentials must be available to the scripts. They never print token values.
+- X API credentials are assumed to already be available from the OS environment or a nearby `.env` file.
+- Do not print, inspect, edit, or commit secret values.
 
 Supported environment variables:
 
@@ -55,35 +56,6 @@ python3 <skill-dir>/scripts/x_api.py check-auth
 ```
 
 The command examples below use the shortest form, `uv run`, but Options B and C run the same scripts identically.
-
-### Passing X API credentials
-
-Each script looks up credentials in this order and uses the first match:
-
-1. **`os.environ`** — Variables set by `export`, by an external loader (direnv, 1Password, etc.), or prefixed inline on the command.
-2. **`.env` file** — Walks up from the current working directory and loads the first `.env` it finds.
-
-Pick whichever fits your setup:
-
-```bash
-# Option 1: drop a .env in the project root (easiest)
-echo 'X_API_BEARER_TOKEN=your-token-here' >> .env
-echo 'X_API_CONSUMER_KEY=your-key-here' >> .env
-echo 'X_API_CONSUMER_KEY_SECRET=your-secret-here' >> .env
-echo 'X_API_ACCESS_TOKEN=your-access-token-here' >> .env
-echo 'X_API_ACCESS_TOKEN_SECRET=your-access-token-secret-here' >> .env
-# Add .env to .gitignore so it doesn't get committed.
-
-# Option 2: export in your shell
-export X_API_BEARER_TOKEN=your-token-here
-export X_API_CONSUMER_KEY=your-key-here
-export X_API_CONSUMER_KEY_SECRET=your-secret-here
-export X_API_ACCESS_TOKEN=your-access-token-here
-export X_API_ACCESS_TOKEN_SECRET=your-access-token-secret-here
-
-# Option 3: prefix inline on the command
-X_API_BEARER_TOKEN=your-token-here uv run ...
-```
 
 ## Quick Start
 

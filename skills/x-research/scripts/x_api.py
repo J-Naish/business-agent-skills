@@ -92,15 +92,7 @@ def parse_env_line(line: str) -> tuple[str, str] | None:
 
 
 def load_env(env_path: str | None = None) -> Path | None:
-    """Load X API credentials from os.environ first, then a .env file.
-
-    The lookup order matches the image-generation skill:
-      1. os.environ, including external loaders and inline prefixes
-      2. The nearest .env file walking up from the current working directory
-
-    When python-dotenv is unavailable, fall back to a minimal parser so direct
-    python3 execution still works for simple KEY=VALUE .env files.
-    """
+    """Load X API credentials from os.environ or the nearest .env file."""
     path: Path | None = None
     if env_path:
         path = Path(env_path).expanduser()
@@ -172,20 +164,10 @@ def rate_limit_headers(headers: dict[str, str]) -> dict[str, str]:
 
 def missing_credentials_message(missing: list[str]) -> str:
     missing_lines = "\n".join(f"  - {key}" for key in missing)
-    exports = "\n".join(f"    export {key}=your-value-here" for key in missing)
-    env_lines = "\n".join(f"    echo '{key}=your-value-here' >> .env" for key in missing)
     return (
-        "ERROR: Required X API credential variables are not set.\n\n"
-        f"Missing:\n{missing_lines}\n\n"
-        "Set them in one of these ways:\n\n"
-        "  Option 1: Create a .env file in your project root\n"
-        f"{env_lines}\n"
-        "    (and add .env to .gitignore)\n\n"
-        "  Option 2: Export them in your shell\n"
-        f"{exports}\n\n"
-        "  Option 3: Set them inline\n"
-        "    X_API_BEARER_TOKEN=your-token-here uv run <command>\n\n"
-        "Create and manage keys at https://developer.x.com/."
+        "ERROR: Required X API credential variables are not set.\n"
+        f"Missing:\n{missing_lines}\n"
+        "Define them in the OS environment or a nearby .env file. Do not print or commit secret values."
     )
 
 

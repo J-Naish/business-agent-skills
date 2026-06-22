@@ -19,13 +19,11 @@ If the user doesn't specify, default to **Gemini Nano Banana (`gemini-3.1-flash-
 ## Prerequisites
 
 - **Python 3.10+** must be installed.
-- The relevant API key must be available:
+- The relevant API key is assumed to already be available from the OS environment or a nearby `.env` file:
   - `GEMINI_API_KEY` for Google Gemini scripts
   - `OPENAI_API_KEY` for OpenAI scripts
 
-You only need the key for the provider(s) you intend to use. Get keys from:
-- Google AI Studio: https://aistudio.google.com/apikey
-- OpenAI: https://platform.openai.com/api-keys
+Do not print, inspect, edit, or commit secret values.
 
 ### How to run the scripts
 
@@ -44,30 +42,6 @@ python3 <skill-dir>/scripts/<provider>/text_to_image.py "prompt"
 ```
 
 The command examples below use the shortest form, `uv run`, but Options B and C run the same scripts identically.
-
-### Passing API keys
-
-Each script looks up its provider's key in this order and uses the first match:
-
-1. **`os.environ`** — Variables set by `export`, by an external loader (direnv, 1Password, etc.), or prefixed inline on the command.
-2. **`.env` file** — Walks up from the current working directory and loads the first `.env` it finds.
-
-Pick whichever fits your setup:
-
-```bash
-# Option 1: drop a .env in the project root (easiest)
-echo 'GEMINI_API_KEY=your-key-here' >> .env
-echo 'OPENAI_API_KEY=your-key-here' >> .env
-# Add .env to .gitignore so it doesn't get committed.
-
-# Option 2: export in your shell (persist via .zshrc / .bashrc)
-export GEMINI_API_KEY=your-key-here
-export OPENAI_API_KEY=your-key-here
-
-# Option 3: prefix inline on the command
-GEMINI_API_KEY=your-key-here uv run ...
-OPENAI_API_KEY=your-key-here uv run ...
-```
 
 ---
 
@@ -340,7 +314,7 @@ For per-use-case prompt templates, see the prompt guide for your provider:
 
 | Problem | Fix |
 |---|---|
-| `GEMINI_API_KEY` / `OPENAI_API_KEY` is unset | Pass it using one of the three methods in "Prerequisites" (`.env` file, `export`, or inline). |
+| `GEMINI_API_KEY` / `OPENAI_API_KEY` is unset | Define the relevant variable in the OS environment or a nearby `.env` file. |
 | `google-genai` or `openai` not found | If running with `uv run` or `pipx run`, dependencies auto-resolve. If using plain `python3`, run `pip install google-genai openai python-dotenv` first. |
 | Only text comes back, no image (Gemini) | Adjust the prompt or switch models. |
 | Safety filter blocks the request | Adjust the prompt — avoid people-heavy or violent imagery. |
