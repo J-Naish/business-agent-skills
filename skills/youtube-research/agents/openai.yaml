@@ -1,0 +1,10 @@
+interface:
+  display_name: "YouTube Research"
+  short_description: "Research YouTube with Data API scripts"
+  icon_small: "./assets/youtube.svg"
+  icon_large: "./assets/youtube.svg"
+  brand_color: "#FF0033"
+  default_prompt: "Use $youtube-research to investigate YouTube topics, videos, channels, comments, and public video performance with API-backed scripts."
+
+policy:
+  allow_implicit_invocation: true
