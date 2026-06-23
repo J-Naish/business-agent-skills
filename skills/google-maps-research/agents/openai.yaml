@@ -1,0 +1,10 @@
+interface:
+  display_name: "Google Maps Research"
+  short_description: "Research places, routes, and local context"
+  icon_small: "./assets/google-maps.svg"
+  icon_large: "./assets/google-maps.svg"
+  brand_color: "#4285F4"
+  default_prompt: "Use $google-maps-research to investigate places, local competitors, routes, addresses, amenities, and environmental context with Google Maps Platform APIs."
+
+policy:
+  allow_implicit_invocation: true

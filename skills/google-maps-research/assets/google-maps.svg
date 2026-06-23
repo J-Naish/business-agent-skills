@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Google Maps Research">
+  <rect width="64" height="64" rx="14" fill="#ffffff"/>
+  <path d="M13 16.5 28.5 10l17 6.5L51 54l-17-6.5L17.5 54 13 16.5z" fill="#E8F0FE"/>
+  <path d="M28.5 10 34 47.5 17.5 54 13 16.5 28.5 10z" fill="#34A853"/>
+  <path d="M28.5 10 45.5 16.5 51 54 34 47.5 28.5 10z" fill="#4285F4"/>
+  <path d="M17.5 54 34 47.5 51 54 34.5 60 17.5 54z" fill="#FBBC05"/>
+  <path d="M37.5 15.5c-7.2 0-13 5.6-13 12.6 0 9.2 13 24.9 13 24.9s13-15.7 13-24.9c0-7-5.8-12.6-13-12.6z" fill="#EA4335"/>
+  <circle cx="37.5" cy="28.1" r="4.7" fill="#ffffff"/>
+</svg>
