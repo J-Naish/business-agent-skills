@@ -1,0 +1,10 @@
+interface:
+  display_name: "Google Keyword Research"
+  short_description: "Research search demand with Keyword Planner"
+  icon_small: "./assets/google-ads.svg"
+  icon_large: "./assets/google-ads.svg"
+  brand_color: "#4285F4"
+  default_prompt: "Use $google-keyword-research to investigate keyword ideas, search volume, CPC, competition, and monthly search demand with Google Ads Keyword Planner data."
+
+policy:
+  allow_implicit_invocation: true
